@@ -12,9 +12,9 @@
       href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
       rel="stylesheet"
     />
-    <title>DUOTECK</title>
+    <title>Prevesitio</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="{% static 'style.css '%}">
+    <link rel="stylesheet" href="{% static 'style.css'%}">
   </head>
   <body>
     <div class="Navbar">
@@ -23,9 +23,12 @@
         data-bs-theme="white"
       >
         <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'inicio' %}"
-            ><img src="{% static 'fotos/logo.webp' %}" style="width: 60px; height:
-            50px;">DUOTECK</a
+          <a class="navbar-brand" 
+             href="{% url 'inicio' %}"
+             style="color: red;"
+
+            ><img src="{% static 'fotos/pngtree-vector-monitor-icon-element-png-image_4227945-removebg-preview.png' %}" style="width: 50px; height:
+            50px;">Prevesitio</a
           >
           <button
             class="navbar-toggler"
@@ -38,84 +41,43 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" style="margin-right: 100px">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <a
-                  class="nav-link active"
+                  class="nav-link active a"
                   type='button'
                   href=##
                   role="button"
                   aria-expanded="false"
+                  style="color: red;"
                 >
-                  Celulares
+                  Acerca de 
                 </a>
                 <a
-                class="nav-link active"
+                class="nav-link active a"
                 type='button'
                 href=##
                 role="button"
                 aria-expanded="false"
+                style="color: red;"
+
                 >
-                Consolas
+                Contactanos
                 </a>
                 <a
-                class="nav-link active"
+                class="nav-link active a"
                 type='button'
                 href=##
                 role="button"
                 aria-expanded="false"
+                style="color: red;"
+                style="font-fam"
+
                 >
-                Laptops
-                </a>
-                <a
-                class="nav-link active"
-                type='button'
-                href=##
-                role="button"
-                aria-expanded="false"
-                >
-                Perifericos
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href=##
-                  >Productos
+                Iniciar Sesión
                 </a>
               </li>
             </ul>
-            <form class="d-flex" role="search" style="margin-right: 30%" method='GET' value=## action=##>
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Buscar producto..."
-                aria-label="Search"
-                name='buscar'
-                value=##
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
-            </form>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link active dropdown-toggle"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                style="color: white;"
-              >
-              {% if user.is_authenticated %}
-              <img src=##/>
-              {% else %}
-              <img src=##/>
-              {% endif %}
-              </a>
-              <ul class="dropdown-menu">
           </div>
         </div>
       </nav>
