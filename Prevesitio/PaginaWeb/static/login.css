@@ -1,0 +1,12 @@
+body{
+    background-color: #ff5757;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    margin-top: 0;
+    margin: unset;
+    background-attachment: fixed;
+  }
+
+.card{
+    border-radius: 30px;
+}

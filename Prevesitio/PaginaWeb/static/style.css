@@ -29,3 +29,8 @@ body{
     text-align: center;
     flex: 1 1 600px; /* El ancho mínimo de cada columna será 300px */
   }
+
+.card{
+
+  border-radius: 50px;
+}
