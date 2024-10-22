@@ -2,18 +2,22 @@
 {% load static %}
 {% block body %}
 
-<div class="flex-container"> 
-    <div class="item1" style= "margin-top: 200px;"> 
-        <a style='color: white; font-size: 80px; font-style: italic'>
-            <img src="{% static 'fotos/pngtree-vector-monitor-icon-element-png-image_4227945-removebg-preview.png' %}" style="width: 150px; height:
-            150px;"> <b> PreveSitio </b> </a>
-    </div>
+<body style="background-image: url('{% static 'fotos/stethoscope-pink-background.jpg' %}'); 
+            background-size: cover; 
+            background-position: center; min-height: 100vh;">
+    <div class="flex-container"  > 
+        <div class="item1" style= "margin-top: 200px;"> 
+            <a style='color: white; font-size: 80px; font-style: italic'>
+                <img src="{% static 'fotos/pngtree-vector-monitor-icon-element-png-image_4227945-removebg-preview.png' %}" style="width: 150px; height:
+                150px;"> <b> PreveSitio </b> </a>
+        </div>
 
-    <div class="item2" style= "margin-top: 200px;"> 
-        <p style='color: white;  font-style: italic' > ¡Bienvenido a Preve Sitio! Aquí encontrarás información sobre enfermedades 
-        renales y recomendaciones de dieta adaptadas a tu condición. 
-        ¡Comienza a cuidar tu salud con nosotros! </p>
-    </div>
+        <div class="item2" style= "margin-top: 200px;"> 
+            <p style='color: white;  font-style: italic' > ¡Bienvenido a Preve Sitio! Aquí encontrarás información sobre enfermedades 
+            renales y recomendaciones de dieta adaptadas a tu condición. 
+            ¡Comienza a cuidar tu salud con nosotros! </p>
+        </div>
 
-</div>
+    </div>
+</body>
 {% endblock  %}

@@ -1,0 +1,85 @@
+{% extends 'navbar.html' %}
+{% load static %}
+{% block body %}
+
+
+
+<body style="background-color: #ff5757; 
+            background-size: cover; 
+            background-position: center; min-height: 100vh;">
+            <div class="container" style="margin-top: 70px">
+                <div class="mb-3 row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3 d-flex align-items-center justify-content-center">
+                      <div class="rounded-circle" id="gallery"></div>
+                      <img src="{{perfil.imagen.url}}"></img>
+                    </div>
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-9">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="text-center" style="color: red; font-style: italic;"><b>Información personal</b></h3>
+                            </div>
+                            <div class="card-body">
+                                <form class="mb-3 row" id="formulario">
+                                    <label for="nombre1" class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 col-form-label" style="color: grey"><b>Nombre</b></label>
+                                    <div class="col-sm-10 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                        <div class="border border-black p-2 mb-2">{{user.first_name}}</div>
+                                    </div>
+                                    <label for="apellido1" class="col-sm-2 col-md-2 col-lg-2 col-xl-2 col-xxl-2 col-form-label"style="color: grey"><b>Apellido</b></label>
+                                    <div class="col-sm-10 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                        <div class="border border-black p-2 mb-2" style="left: 30px;">{{user.last_name}}</div>
+                                    </div>
+                                <br>
+                                <br>
+                                <br>
+                                <hr><br>
+                                  <div class="row mb-3">
+                                    <div class="my-2">
+                                      <label for="email1" class="form-label"style="color: grey"><b>Email</b></label>
+                                        <div class="border border-black p-2 mb-2">{{user.email}}</div>
+                                    </div>
+                                    
+                                    <div>
+                                    <a href="{% url 'modificar' user.username %}" > 
+                                        <button  type="button" class="btn btn-primary" data-bs-toggle="modal" style="left: 100%;">
+                                        Modificar informacion
+                                        </button>
+                                   </a>
+                                    </div>
+                                   <a> 
+                                    <br>
+                                    <button  type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#borrar" style="left: 100%;" style="color: red;">
+                                     Eliminar usuario
+                                    </button>
+                                    </a>
+                                    <div class="modal" tabindex="-1" id="borrar">
+                                        <div class="modal-dialog">
+                                          <div class="modal-content">
+                                            <div class="modal-header">
+                                              <h5 class="modal-title">¿Está seguro de que desea eliminar el usuario?</h5>
+                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                              <p>Una vez borrado perdera toda la información</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                                            </a>
+                                            <a href="{% url 'eliminar' user.username %}" >
+                                              <button type="button" class="btn btn-danger">Borrar</button>
+                                            </a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        
+                                      </div>
+        
+        
+                                </form>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+{% endblock  %}

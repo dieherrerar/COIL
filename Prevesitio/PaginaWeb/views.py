@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login, get_user_model, logout
+from .models import Perfil
 
 def index(request):
     return render(request, 'index.html')
@@ -27,7 +28,7 @@ def registro(request):
                         return render(request, 'registro.html', {'mensaje': 'Las contraseñas deben tener minimo 8 caracteres y máximo 25'})
                     else:
                         user = User.objects.create_user(first_name=nombre, last_name=apellido, username=usuario, email=correo, password=password1)
-                        user.save()
+                        Perfil.objects.create(user=user)
                         return render(request, 'index.html', {'mensaje': 'Usuario creado correctamente'})
                 else:
                     return render(request, 'registro.html', {'mensaje': 'Las contraseñas no coinciden'})
@@ -67,9 +68,53 @@ def iniciar_sesion(request):
         
     except Exception as error:
         print(error)
+        
+def modificar(request, username):
+    try:
+        user = get_object_or_404(User, username=username)
+        nombre = request.POST.get('nombre1')
+        apellido = request.POST.get('apellido1')
+        usuario = request.POST.get('usuario')
+        correo = request.POST.get('email1')
+        foto   = request.FILES.get('imagen')
+        if request.user.is_authenticated:
+            if request.method == 'POST':
+                if nombre:
+                    user.first_name = nombre
+                    user.save()
+                if apellido:
+                    user.last_name = apellido
+                    user.save()
+                if usuario:
+                    user.username = usuario
+                    user.save()
+                if correo:
+                    user.email = correo
+                    user.save()
+                if foto:
+                    perfil = Perfil.objects.get_or_create(user=user)
+                    perfil.imagen = foto
+                    perfil.save()
+                    user.save()
+
+                return redirect('perfil')
+            return render(request, 'modificar_perfil.html')
+    except IntegrityError:
+        return render(request, 'modificar.html',{'mensaje':'Nombre de usuario ya existe'})
+    except Exception as error:
+        print(error)
+        
+def eliminar_usuario(request, username):
+    usuario = get_object_or_404(User, username=username)
+    usuario.delete()
+    return redirect('inicio')
 
 def cerrar_sesion(request):
     logout(request)
     return render(request, 'index.html')
+
+def perfil(request):
+    perfil = get_object_or_404(Perfil, user=request.user)
+    return render(request, 'perfil.html', {'perfil': perfil})
 
 

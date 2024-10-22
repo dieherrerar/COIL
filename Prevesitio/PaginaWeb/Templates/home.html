@@ -2,4 +2,23 @@
 {% load static %}
 {% block body %}
 
+<body style="background-image: url('{% static 'fotos/gran-cantidad-alimentos-saludables-nutritivos-varios-contenedores-colores-dispuestos-sobre-mesa_665346-83704.jpg' %}'); 
+            background-size: cover; 
+            background-position: center; min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);">
+    <div class="flex-container"  > 
+        <div class="item1" style= "margin-top: 200px;"> 
+            <a style='color: white; font-size: 80px; font-style: italic'>
+                <b> Bienvenido, {{user.first_name}} </b> </a>
+        </div>
+
+        <div class="item2" style= "margin-top: 200px;"> 
+            <p style='color: white;  font-style: italic' > ¡Bienvenido a Preve Sitio! Aquí encontrarás información sobre enfermedades 
+            renales y recomendaciones de dieta adaptadas a tu condición. 
+            ¡Comienza a cuidar tu salud con nosotros! </p>
+        </div>
+
+    </div>
+</body>
+
 {% endblock  %}
