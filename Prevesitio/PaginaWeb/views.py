@@ -118,3 +118,5 @@ def perfil(request):
     return render(request, 'perfil.html', {'perfil': perfil})
 
 
+def educacion(request):
+    return render(request, 'educacion.html')
