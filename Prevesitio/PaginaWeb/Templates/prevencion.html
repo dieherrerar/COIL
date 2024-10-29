@@ -1,0 +1,60 @@
+{% extends 'navbar.html' %} {% load static %} {% block body %}
+
+<body style="background-color: #f8f9fa">
+  <div class="container-p">
+    <div class="container-p__information">
+      <h2 class="container-p__information__title">Prevención</h2>
+      <div class="container-p__title__separator"></div>
+      <div class="container-p__content">
+        La prevención de la diabetes es clave para mantener una buena salud.
+        Para reducir el riesgo, es importante mantener un peso saludable, seguir
+        una dieta equilibrada rica en frutas, verduras y granos integrales, y
+        realizar actividad física regularmente. Además, controlar el estrés y
+        hacerse chequeos médicos periódicos puede ayudar a detectar factores de
+        riesgo a tiempo. Cuidar de tu salud hoy puede marcar la diferencia
+        mañana.
+      </div>
+    </div>
+  </div>
+  <div class="container-p">
+    <div class="container-p__grid">
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__001.png' %}" />
+        <p>Mantener un peso saludable</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__003.webp' %}" />
+        <p>Seguir una dieta balanceada</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__002.png' %}" />
+        <p>Aumento en el consumo de alimentos ricos en fibra</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__004.png' %}" />
+        <p>Limitar el consumo de azúcares y carbohidratos refinados</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__005.png' %}" />
+        <p>Elegir grasas a saludables: aceite de oliva, aguacate, nueces.</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__006.png' %}" />
+        <p>Hacer ejercicio regularmente</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__007.png' %}" />
+        <p>Controlar el estrés</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__008.png' %}" />
+        <p>Realizar chequeos médicos regulares</p>
+      </div>
+      <div class="container-p__box">
+        <img src="{% static 'fotos/health__009.png' %}" />
+        <p>Evitar el consumo de tabaco</p>
+      </div>
+    </div>
+  </div>
+</body>
+{% endblock %}
