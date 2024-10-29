@@ -120,3 +120,6 @@ def perfil(request):
 
 def educacion(request):
     return render(request, 'educacion.html')
+
+def prevencion(request):
+    return render(request, 'prevencion.html')
