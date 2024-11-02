@@ -123,3 +123,9 @@ def educacion(request):
 
 def prevencion(request):
     return render(request, 'prevencion.html')
+
+def contacto(request):
+    return render(request, 'contacto.html')
+
+def acerca(request):
+    return render(request, 'acerca.html')

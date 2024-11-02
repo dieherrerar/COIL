@@ -258,3 +258,169 @@ body {
     width: 100%;
   }
 }
+
+
+/* PAGINA CONTACTO - BENJA FILIPPI */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #f4f4f9;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 24px;
+  color: #00bfff;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links a {
+  color: #ff0000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar .nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal */
+.main-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Sección de información de contacto */
+.contact-info {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3, .contact-info h4 {
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.contact-info p, .contact-info a {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 10px;
+  text-decoration: none;
+}
+
+.section-title {
+  background-color: #555;
+  color: #fff;
+  padding: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Formulario */
+.contact-form {
+  flex: 2;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+  color: #333;
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.contact-form p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 80px;
+}
+
+.form-group input[type="checkbox"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+.form-group .checkbox-label {
+  display: inline-block;
+  color: #666;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff0000;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #660000;
+}
+
+.terms {
+  font-size: 12px;
+  color: #666;
+  text-align: left;
+  margin-top: 10px;
+}
+
+/* FIN PAGINA CONTACTO - BENJA FILIPPI */

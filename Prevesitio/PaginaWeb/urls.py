@@ -11,5 +11,7 @@ urlpatterns = [
     path('eliminar/<str:username>', views.eliminar_usuario, name='eliminar'),
     path('perfil/', views.perfil, name='perfil'),
     path('educacion/', views.educacion, name='educacion'),
-    path('prevencion/', views.prevencion, name='prevencion')
+    path('prevencion/', views.prevencion, name='prevencion'),
+    path('contacto/', views.contacto, name='contacto'),
+    path('acerca/', views.acerca, name='acerca')
 ]
