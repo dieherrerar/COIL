@@ -129,3 +129,6 @@ def contacto(request):
 
 def acerca(request):
     return render(request, 'acerca.html')
+
+def calculadora(request):
+    return render(request, 'calculadora.html')

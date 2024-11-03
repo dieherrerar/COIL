@@ -13,5 +13,6 @@ urlpatterns = [
     path('educacion/', views.educacion, name='educacion'),
     path('prevencion/', views.prevencion, name='prevencion'),
     path('contacto/', views.contacto, name='contacto'),
-    path('acerca/', views.acerca, name='acerca')
+    path('acerca/', views.acerca, name='acerca'),
+    path('calculadora/', views.calculadora, name='calculadora')
 ]
