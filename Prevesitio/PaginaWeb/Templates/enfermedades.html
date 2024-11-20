@@ -19,12 +19,7 @@
     <div class="container-e__information">
       <div class="container-e__content" style="text-align: justify; flex: 2; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 3px solid #000000;">
         ¿Qué tiene que ver la diabetes con los riñones?
-        Los riñones son como filtros que eliminan desechos de la sangre. Sin embargo, cuando hay demasiado azúcar en la sangre por
-        largos períodos (como ocurre en la diabetes), esos filtros se dañan. Esto lleva a una condición llamada enfermedad renal
-        crónica (ERC), que significa que los riñones pierden su capacidad de funcionar correctamente.
-        Muchas personas con diabetes tipo 2 desarrollan problemas renales porque no logran mantener un buen control de su
-        azúcar en la sangre. De hecho, la diabetes es la principal causa de daño renal en las etapas más avanzadas, donde algunos
-        pacientes incluso necesitan diálisis, una especie de “riñón artificial” o un trasplante de riñón para sobrevivir.
+        La diabetes afecta a los riñones al dañar sus filtros, que eliminan desechos de la sangre, cuando los niveles de azúcar permanecen elevados durante mucho tiempo. Esto puede llevar a la enfermedad renal crónica (ERC), donde los riñones pierden su función. La diabetes tipo 2, especialmente cuando no se controla bien, es la principal causa de daño renal, lo que puede requerir diálisis o un trasplante de riñón en etapas avanzadas.
       </div>
     </div>
   </div>
@@ -38,19 +33,19 @@
       enfermedad renal
       </button>
       <button class="container-e__tabs-btn" onclick="openTab(event, 'tab2')">
-        Dieta
+      Manifestaciones clínica
       </button>
       <button class="container-e__tabs-btn" onclick="openTab(event, 'tab3')">
-        Ejercicio
+        Factores de riesgo
       </button>
       <button class="container-e__tabs-btn" onclick="openTab(event, 'tab4')">
-        Estrés
+        Complicaciones de la diabetes
       </button>
       <button class="container-e__tabs-btn" onclick="openTab(event, 'tab5')">
-        Salud
+        Diagnóstico de Diabetes
       </button>
       <button class="container-e__tabs-btn" onclick="openTab(event, 'tab6')">
-        Evitar
+        Medidas Preventivas
       </button>
     </div>
     <div id="tab1" class="container-e__tab-content active" style="border: 3px solid #000000;">
@@ -61,69 +56,211 @@
         <img src="{% static 'fotos/esquema2.png' %}" />
       </div>
     </div>
-    <div id="tab2" class="container-e__tab-content">
+    <div id="tab2" class="container-e__tab-content" style="border: 3px solid #000000;">
       <div class="container-e__tab-details">
         <div class="container-e__tab-details__content">
-          <h2>Aliméntate de forma equilibrada</h2>
-          <p>
-            Consume una dieta rica en frutas, verduras, granos integrales y
-            proteínas magras. Limita los azúcares añadidos y las grasas
-            saturadas.
-          </p>
+          <p>Los pacientes suelen ser asintomáticos en las primeras etapas; algunos pueden referir orina espumosa. En las etapas posteriores, pueden estar presentes características clínicas de enfermedad renal crónica (p. ej., hipertensión, sobrecarga de volumen), además de:</p>
+            <ul>
+                <li>Presión arterial alta que es difícil de controlar</li>
+                <li>Hinchazón de pies, tobillos, manos u ojos</li>
+                <li>Orina espumosa</li>
+                <li>Confusión o dificultad para pensar</li>
+                <li>Falta de aire</li>
+                <li>Pérdida del apetito</li>
+                <li>Náuseas y vómitos</li>
+                <li>Picazón</li>
+                <li>Cansancio y debilidad</li>
+            </ul>
         </div>
-        <img src="{% static 'fotos/healthe__002.webp' %}" />
+        <img src="{% static 'fotos/01.png' %}" />
       </div>
     </div>
-    <div id="tab3" class="container-e__tab-content">
+    <div id="tab3" class="container-e__tab-content" style="border: 3px solid #000000;">
       <div class="container-e__tab-details">
         <div class="container-e__tab-details__content">
-          <h2>Realiza actividad física</h2>
-          <p>
-            Intenta hacer al menos 150 minutos de ejercicio moderado a la
-            semana, como caminar, nadar o andar en bicicleta. Esto ayuda a
-            controlar el peso y mejorar la sensibilidad a la insulina.
-          </p>
+          <p>Los factores de riesgo para la nefropatía diabética incluyen aspectos genéticos, metabólicos y ambientales:</p>
+            <ul>
+                <li><strong>Edad:</strong> Más frecuente entre 50 y 70 años, con mayor riesgo a mayor edad.</li>
+                <li><strong>Etnia:</strong> Afroamericanos e hispanos tienen mayor predisposición.</li>
+                <li><strong>Sexo:</strong> Las mujeres diabéticas son más susceptibles por factores hormonales y genéticos.</li>
+                <li><strong>Hipertensión y hiperglucemia:</strong> Daños en vasos sanguíneos y mal control de glucosa aceleran el daño renal.</li>
+                <li><strong>Tabaco y obesidad:</strong> Aumentan el riesgo por inflamación, estrés oxidativo y desórdenes metabólicos.</li>
+                <li><strong>Factores genéticos y nivel socioeconómico:</strong> Herencia y acceso limitado a cuidados agravan el riesgo.</li>
+            </ul>
+            <ol>
+                <li><strong>Etapa 1:</strong> Los riñones trabajan más sin daño evidente, con mínimas proteínas en la orina.</li>
+                <li><strong>Etapa 2:</strong> Daño leve en los riñones tras 2-5 años, con presencia constante de proteína en la orina.</li>
+                <li><strong>Etapa 3:</strong> Daño progresivo tras 5-7 años, mayor proteína en la orina, disminución de función renal y presión arterial alta.</li>
+                <li><strong>Etapa 4:</strong> Daño severo, insuficiencia renal avanzada, alta proteína en orina y posible necesidad de diálisis o trasplante.</li>
+            </ol>
         </div>
-        <img src="{% static 'fotos/healthe__003.webp' %}" />
+        <img src="{% static 'fotos/02.png' %}" />
       </div>
     </div>
-    <div id="tab4" class="container-e__tab-content">
+    <div id="tab4" class="container-e__tab-content" style="border: 3px solid #000000;">
       <div class="container-e__tab-details">
         <div class="container-e__tab-details__content">
-          <h2>Controla el estrés</h2>
-          <p>
-            El estrés crónico puede afectar tus niveles de glucosa. Practica
-            técnicas de relajación como la meditación, el yoga o la respiración
-            profunda.
-          </p>
+          <div>
+              <h4><strong>Infarto Agudo al Miocardio</strong></h4>
+              <p>La diabetes aumenta el riesgo de infartos al corazón debido a la obstrucción de arterias, dañando el músculo cardíaco.</p>
+              <h5>Factores de riesgo</h5>
+              <ul>
+                  <li>Fumar</li>
+                  <li>Sobrepeso</li>
+                  <li>Presión alta</li>
+                  <li>Colesterol elevado</li>
+                  <li>Mala higiene bucal</li>
+              </ul>
+              <h5><strong>Prevención</strong></h5>
+              <ul>
+                  <li>Dejar de fumar</li>
+                  <li>Mantener un peso saludable</li>
+                  <li>Dieta balanceada</li>
+                  <li>Ejercicio regular</li>
+                  <li>Controlar la diabetes</li>
+              </ul>
+          </div>
+      
+          <div>
+              <h4><strong>Lesión Renal Aguda (LRA)</strong></h4>
+              <p>Es una pérdida súbita de la función renal, más común en personas con diabetes y enfermedades cardiovasculares o renales.</p>
+              <h5>Factores de riesgo</h5>
+              <ul>
+                  <li>Presión alta</li>
+                  <li>Edad avanzada</li>
+                  <li>Ciertos medicamentos</li>
+              </ul>
+              <h5>Prevención</h5>
+              <ul>
+                  <li>Hidratación</li>
+                  <li>Control de diabetes e hipertensión</li>
+                  <li>Evitar medicamentos dañinos para los riñones</li>
+              </ul>
+          </div>
+      
+          <div>
+              <h4><strong>Infecciones de Vías Urinarias</strong></h4>
+              <p>Mayor riesgo en diabéticos, afectando vías bajas (dolor al orinar, sangre en la orina) y altas (dolor lumbar, fiebre).</p>
+              <h5>Prevención</h5>
+              <ul>
+                  <li>Controlar la glicemia</li>
+                  <li>Mantener buena higiene íntima</li>
+              </ul>
+          </div>
+      
+          <div>
+              <h4><strong>Retinopatía Diabética</strong></h4>
+              <p>Complicación ocular causada por altos niveles de glucosa, que puede llevar a ceguera.</p>
+              <h5>Prevención</h5>
+              <ul>
+                  <li>Control riguroso de la diabetes</li>
+              </ul>
+          </div>
+      
+          <div>
+              <h4><strong>Neuropatía Diabética</strong></h4>
+              <p>Daño a los nervios por niveles altos de glucosa, causando pérdida de sensibilidad y funcionalidad.</p>
+              <h5>Consecuencias</h5>
+              <ul>
+                  <li>Complicaciones graves como pie diabético</li>
+              </ul>
+          </div>
+      
+          <div>
+              <h4>Acidosis Metabólica Tipo IV</strong></h4>
+              <p>Ocurre en personas con diabetes y enfermedad renal crónica. Se caracteriza por acumulación de ácido y potasio en el cuerpo.</p>
+              <h5>Factores de riesgo</h5>
+              <ul>
+                  <li>ERC avanzada</li>
+                  <li>Hipoaldosteronismo</li>
+                  <li>Ciertos medicamentos</li>
+              </ul>
+              <h4>Prevención</h4>
+              <ul>
+                  <li>Control de glucosa</li>
+                  <li>Hidratación</li>
+                  <li>Monitoreo renal</li>
+                  <li>Manejo adecuado de hipertensión</li>
+              </ul>
+          </div>
         </div>
-        <img src="{% static 'fotos/healthe__004.webp' %}" />
       </div>
     </div>
-    <div id="tab5" class="container-e__tab-content">
+    <div id="tab5" class="container-e__tab-content" style="border: 3px solid #000000;">
       <div class="container-e__tab-details">
         <div class="container-e__tab-details__content">
-          <h2>Monitorea tu salud</h2>
-          <p>
-            Hazte chequeos regulares para revisar tus niveles de azúcar en
-            sangre y otros indicadores de salud. Detectar problemas a tiempo es
-            clave.
-          </p>
+          <h4><strong>Diagnóstico y Manejo del Daño Renal</strong></h4>
+
+              <h5><strong>Diagnóstico</strong></h5>
+              <ul>
+                  <li>Proteína en la orina (albúmina) durante al menos 3 meses, lo cual indica daño en los riñones.</li>
+                  <li>Reducción de la función renal (medida como Tasa de Filtración Glomerular o TFG).</li>
+              </ul>
+              <p>Es importante asegurarse de que no haya otras causas del daño renal, como hipertensión o enfermedades específicas de los riñones.</p>
+
+              <h5><strong>Cuándo ver a un especialista en riñones (nefrólogo)</strong></h5>
+              <p>Se necesita evaluación adicional por un nefrólogo si ocurre alguna de estas situaciones:</p>
+              <ul>
+                  <li>El diagnóstico no está claro.</li>
+                  <li>Hay señales de inflamación o daño activo en el análisis de orina.</li>
+                  <li>La cantidad de albúmina en la orina aumenta rápidamente.</li>
+                  <li>Aparece síndrome nefrótico (hinchazón en el cuerpo debido a pérdida masiva de proteínas en la orina).</li>
+                  <li>La función renal disminuye rápidamente o es muy baja (&lt; 30 mL/min).</li>
+                  <li>Es necesario considerar diálisis o trasplante renal.</li>
+                  <li>En personas con diabetes tipo 1, si no hay signos de daño en los ojos (retinopatía diabética), podría ser otra causa del daño renal.</li>
+              </ul>
+
+              <h5><strong>Qué sigue</strong></h5>
+              <p>El tratamiento incluye:</p>
+              <ul>
+                  <li>Manejar la diabetes y prevenir el daño renal con medicamentos.</li>
+                  <li>Controlar la presión arterial y los niveles de azúcar en sangre.</li>
+                  <li>Realizar visitas regulares al médico.</li>
+              </ul>
+              <p>Consultar a un especialista temprano puede ayudar a prevenir complicaciones graves.</p>
         </div>
         <img src="{% static 'fotos/healthe__005.webp' %}" />
       </div>
     </div>
-    <div id="tab6" class="container-e__tab-content">
+    <div id="tab6" class="container-e__tab-content" style="border: 3px solid #000000;">
       <div class="container-e__tab-details">
         <div class="container-e__tab-details__content">
-          <h2>Evita el tabaco y limita el alcohol</h2>
-          <p>
-            Fumar y el consumo excesivo de alcohol aumentan el riesgo de
-            diabetes. Si fumas, busca ayuda para dejarlo y modera tu consumo de
-            bebidas alcohólicas.
-          </p>
+          <div style="flex: 1; padding-right: 20px;">
+            <h1>Medidas Preventivas para la Enfermedad Renal Diabética</h1>
+            <ol>
+                <li>
+                    <strong>Exámenes regulares:</strong>
+                    <ul>
+                        <li>Realiza al menos una vez al año pruebas para evaluar:
+                            <ul>
+                                <li>Albúmina en la orina (indicador temprano de daño renal).</li>
+                                <li>Función renal (TFGe).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Control de diabetes y presión arterial:</strong>
+                    <ul>
+                        <li>Mantén una hemoglobina A1C por debajo del 7%.</li>
+                        <li>Mantén la presión arterial bajo control, con un objetivo menor a 130/80 mmHg.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Evitar factores perjudiciales:</strong>
+                    <ul>
+                        <li>Evita medicamentos nefrotóxicos, salvo los recetados para proteger los riñones (como los IECA o ARAs).</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Monitoreo en enfermedad renal crónica:</strong>
+                    <ul>
+                        <li>Si ya hay enfermedad renal, controla albúmina urinaria y TFGe entre 1 y 4 veces al año, según el grado de afectación.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Estas medidas ayudan a prevenir o retrasar el daño renal y son clave para un manejo integral de la diabetes.</p>
         </div>
-        <img src="{% static 'fotos/healthe__006.webp' %}" />
       </div>
     </div>
   </div>
