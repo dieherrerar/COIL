@@ -3,10 +3,13 @@ from django.contrib.auth.models import User
 from django.db import IntegrityError
 from django.contrib.auth import authenticate, login, get_user_model, logout
 from .models import Perfil
+from django.contrib.auth.decorators import login_required
+
 
 def index(request):
     return render(request, 'index.html')
 
+@login_required
 def home(request):
     return render(request, 'home.html')
 
@@ -113,14 +116,16 @@ def cerrar_sesion(request):
     logout(request)
     return render(request, 'index.html')
 
+@login_required
 def perfil(request):
     perfil = get_object_or_404(Perfil, user=request.user)
     return render(request, 'perfil.html', {'perfil': perfil})
 
-
+@login_required
 def educacion(request):
     return render(request, 'educacion.html')
 
+@login_required
 def prevencion(request):
     return render(request, 'prevencion.html')
 
@@ -130,8 +135,10 @@ def contacto(request):
 def acerca(request):
     return render(request, 'acerca.html')
 
+@login_required
 def calculadora(request):
     return render(request, 'calculadora.html')
 
+@login_required
 def enfermedades(request):
     return render(request, 'enfermedades.html')
