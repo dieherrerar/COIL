@@ -1,0 +1,171 @@
+{% extends 'navbar.html' %} {% load static %} {% block body %}
+
+<body style="background-image: url('{% static 'fotos/oficina.png' %}'); 
+            background-size: cover; 
+            background-position: center; min-height: 100vh;
+            background-color: rgba(0, 0, 0, 0.9);">
+  <div class="container-e">
+    <div class="container-e__information">
+      <h2 class="container-e__information__title" style="color: white; backdrop-filter: blur(8px); border-radius: 20px;">Diabetes</h2>
+      <div class="container-e__title__separator"></div>
+      <div class="container-e__content" style="text-align: justify; flex: 2; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 3px solid #000000;"">
+        La diabetes mellitus tipo 2 (DM2) es una enfermedad crónica muy común que ocurre cuando el cuerpo tiene problemas para
+        usar la insulina, una hormona que ayuda a controlar los niveles de azúcar en la sangre. Con el tiempo, esta condición puede
+        causar que el azúcar en la sangre se mantenga muy alta, lo que afecta a varios órganos, incluyendo los riñones.
+      </div>
+    </div>
+  </div>
+  <div class="container-e">
+    <div class="container-e__information">
+      <div class="container-e__content" style="text-align: justify; flex: 2; background-color: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 3px solid #000000;">
+        ¿Qué tiene que ver la diabetes con los riñones?
+        Los riñones son como filtros que eliminan desechos de la sangre. Sin embargo, cuando hay demasiado azúcar en la sangre por
+        largos períodos (como ocurre en la diabetes), esos filtros se dañan. Esto lleva a una condición llamada enfermedad renal
+        crónica (ERC), que significa que los riñones pierden su capacidad de funcionar correctamente.
+        Muchas personas con diabetes tipo 2 desarrollan problemas renales porque no logran mantener un buen control de su
+        azúcar en la sangre. De hecho, la diabetes es la principal causa de daño renal en las etapas más avanzadas, donde algunos
+        pacientes incluso necesitan diálisis, una especie de “riñón artificial” o un trasplante de riñón para sobrevivir.
+      </div>
+    </div>
+  </div>
+  <div class="container-e">
+    <div class="container-e__tabs">
+      <button
+        class="container-e__tabs-btn active"
+        onclick="openTab(event, 'tab1')"
+      >
+      De la diabetes a la
+      enfermedad renal
+      </button>
+      <button class="container-e__tabs-btn" onclick="openTab(event, 'tab2')">
+        Dieta
+      </button>
+      <button class="container-e__tabs-btn" onclick="openTab(event, 'tab3')">
+        Ejercicio
+      </button>
+      <button class="container-e__tabs-btn" onclick="openTab(event, 'tab4')">
+        Estrés
+      </button>
+      <button class="container-e__tabs-btn" onclick="openTab(event, 'tab5')">
+        Salud
+      </button>
+      <button class="container-e__tabs-btn" onclick="openTab(event, 'tab6')">
+        Evitar
+      </button>
+    </div>
+    <div id="tab1" class="container-e__tab-content active" style="border: 3px solid #000000;">
+      <div style=" text-align: center;">
+        <img src="{% static 'fotos/esquema1.png' %}" />
+      </div>
+      <div style=" text-align: center; width: 30 px;">
+        <img src="{% static 'fotos/esquema2.png' %}" />
+      </div>
+    </div>
+    <div id="tab2" class="container-e__tab-content">
+      <div class="container-e__tab-details">
+        <div class="container-e__tab-details__content">
+          <h2>Aliméntate de forma equilibrada</h2>
+          <p>
+            Consume una dieta rica en frutas, verduras, granos integrales y
+            proteínas magras. Limita los azúcares añadidos y las grasas
+            saturadas.
+          </p>
+        </div>
+        <img src="{% static 'fotos/healthe__002.webp' %}" />
+      </div>
+    </div>
+    <div id="tab3" class="container-e__tab-content">
+      <div class="container-e__tab-details">
+        <div class="container-e__tab-details__content">
+          <h2>Realiza actividad física</h2>
+          <p>
+            Intenta hacer al menos 150 minutos de ejercicio moderado a la
+            semana, como caminar, nadar o andar en bicicleta. Esto ayuda a
+            controlar el peso y mejorar la sensibilidad a la insulina.
+          </p>
+        </div>
+        <img src="{% static 'fotos/healthe__003.webp' %}" />
+      </div>
+    </div>
+    <div id="tab4" class="container-e__tab-content">
+      <div class="container-e__tab-details">
+        <div class="container-e__tab-details__content">
+          <h2>Controla el estrés</h2>
+          <p>
+            El estrés crónico puede afectar tus niveles de glucosa. Practica
+            técnicas de relajación como la meditación, el yoga o la respiración
+            profunda.
+          </p>
+        </div>
+        <img src="{% static 'fotos/healthe__004.webp' %}" />
+      </div>
+    </div>
+    <div id="tab5" class="container-e__tab-content">
+      <div class="container-e__tab-details">
+        <div class="container-e__tab-details__content">
+          <h2>Monitorea tu salud</h2>
+          <p>
+            Hazte chequeos regulares para revisar tus niveles de azúcar en
+            sangre y otros indicadores de salud. Detectar problemas a tiempo es
+            clave.
+          </p>
+        </div>
+        <img src="{% static 'fotos/healthe__005.webp' %}" />
+      </div>
+    </div>
+    <div id="tab6" class="container-e__tab-content">
+      <div class="container-e__tab-details">
+        <div class="container-e__tab-details__content">
+          <h2>Evita el tabaco y limita el alcohol</h2>
+          <p>
+            Fumar y el consumo excesivo de alcohol aumentan el riesgo de
+            diabetes. Si fumas, busca ayuda para dejarlo y modera tu consumo de
+            bebidas alcohólicas.
+          </p>
+        </div>
+        <img src="{% static 'fotos/healthe__006.webp' %}" />
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  function openTab(evt, tabName) {
+    let i, tabcontent, tabbuttons;
+    tabbuttons = document.getElementsByClassName("container-e__tabs-btn");
+    tabcontent = document.getElementsByClassName("container-e__tab-content");
+
+    // Función para cambiar el texto de los TABS en responsive
+    function changeTabText(x) {      
+      for (let i = 0; i < tabbuttons.length; i++) {
+        if (x.matches) {
+          tabbuttons[i].textContent = `E. ${i + 1}`;
+        }
+      }
+    }
+
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].classList.remove("active");
+    }
+
+    for (i = 0; i < tabbuttons.length; i++) {
+      tabbuttons[i].classList.remove("active");
+    }
+
+    // Muestra el contenido de la pestaña activa y añade la clase "active" al botón
+    document.getElementById(tabName).classList.add("active");
+    evt.currentTarget.classList.add("active");
+  }
+
+  // Función para inicializar el cambio de texto
+  function initializeTabText() {
+    const x = window.matchMedia("(max-width: 768px)");
+    changeTabText(x);
+    x.addEventListener("change", function () {
+      changeTabText(x);
+    });
+  }
+
+  // Ejecutar la función al cargar la página
+  window.onload = initializeTabText;
+</script>
+{% endblock %}

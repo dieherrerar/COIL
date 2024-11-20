@@ -132,3 +132,6 @@ def acerca(request):
 
 def calculadora(request):
     return render(request, 'calculadora.html')
+
+def enfermedades(request):
+    return render(request, 'enfermedades.html')
