@@ -10,8 +10,12 @@
             <div class="container" style="margin-top: 70px">
                 <div class="mb-3 row">
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-3 col-xxl-3 d-flex align-items-center justify-content-center">
-                      <div class="rounded-circle" id="gallery"></div>
-                      <img src="{{perfil.imagen.url}}"></img>
+                      <div style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden;"></div>
+                      {% if perfil.image %}
+                          <img src="{{ perfil.image.url }}" alt="Imagen de perfil" style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%;">
+                      {% else %}
+                          <img src="{% static 'fotos/03.png' %}" alt="Imagen de perfil por defecto" style="width: 180px; height: 180px; object-fit: cover; border-radius: 50%;">
+                      {% endif %}
                     </div>
                     <div class="col-sm-12 col-md-12 col-lg-12 col-xl-9 col-xxl-9">
                         <div class="card">

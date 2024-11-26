@@ -95,10 +95,9 @@ def modificar(request, username):
                     user.email = correo
                     user.save()
                 if foto:
-                    perfil = Perfil.objects.get_or_create(user=user)
-                    perfil.imagen = foto
+                    perfil = get_object_or_404(Perfil, user=request.user)
+                    perfil.image = foto
                     perfil.save()
-                    user.save()
 
                 return redirect('perfil')
             return render(request, 'modificar_perfil.html')
@@ -119,6 +118,10 @@ def cerrar_sesion(request):
 @login_required
 def perfil(request):
     perfil = get_object_or_404(Perfil, user=request.user)
+    if perfil.image:
+        print(perfil.image.url)
+    else:
+        print("No hay imagen asociada al perfil")    
     return render(request, 'perfil.html', {'perfil': perfil})
 
 @login_required
